@@ -17,7 +17,7 @@ class Root extends Component {
           <link rel="stylesheet" type="text/css" href="/styles.css"/>
         </head>
         <body>
-          <Main>Hello world</Main>
+          <Main>Mnspcd React Boilerplate</Main>
         </body>
       </html>
     );
