@@ -1,6 +1,9 @@
 import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import data from './scripts/data';
+import reactRouterToArray from 'react-router-to-array';
+
+require.extensions['.css'] = () => { return; };
+const routes = reactRouterToArray(require('./scripts/routes'));
 
 module.exports = {
   entry: './scripts/entry.js',
@@ -47,6 +50,6 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin('styles.css'),
-    new StaticSiteGeneratorPlugin('bundle.js', data.routes),
+    new StaticSiteGeneratorPlugin('bundle.js', routes),
   ],
 };
