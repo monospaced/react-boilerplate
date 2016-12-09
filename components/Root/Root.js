@@ -1,8 +1,5 @@
 import React, { Component, } from 'react';
 import '../../assets/favicon.ico';
-import 'normalize.css';
-import './Root.css';
-import Main from '../Main/Main';
 
 class Root extends Component {
   constructor(props) {
@@ -10,14 +7,15 @@ class Root extends Component {
   }
   render() {
     return (
-      <html>
+      <html lang="en-gb">
         <head>
-          <title>{this.props.title}</title>
-          <meta name="viewport" content="width=device-width"/>
-          <link rel="stylesheet" type="text/css" href="/styles.css"/>
+          {this.props.meta}
+          <meta name="viewport" content="width=device-width" />
+          <link rel="stylesheet" href="/styles.css" />
         </head>
         <body>
-          <Main>Mnspcd React Boilerplate</Main>
+          <div id="app" dangerouslySetInnerHTML={this.props.app} />
+          <script src="/bundle.js"></script>
         </body>
       </html>
     );
