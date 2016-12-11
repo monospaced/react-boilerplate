@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'theme-font';
-  src: url('../../theme/theme-font.woff2') format('woff2'),
-       url('../../theme/theme-font.woff') format('woff');
+  src: url('../../theme/theme-font.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

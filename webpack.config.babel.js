@@ -35,10 +35,6 @@ module.exports = {
         test: /\.woff$/,
         loader: 'url-loader?limit=100000&&mimetype=application/font-woff',
       },
-      {
-        test: /\.woff2$/,
-        loader: 'url-loader?limit=100000&&mimetype=application/font-woff2',
-      },
       { test: /\.(png|jpg)$/,
         loader: 'file-loader?name=/assets/[name].[ext]',
       },
