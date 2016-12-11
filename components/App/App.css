@@ -9,7 +9,6 @@ html {
   color: color(var(--background-color) contrast(0%));
   background: var(--background-color);
   text-rendering: optimizeLegibilty;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 *,
