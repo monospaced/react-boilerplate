@@ -6,8 +6,8 @@ html {
   /* font-size: 100%; */ /* 16px */
   line-height: 1.25;
   box-sizing: border-box;
-  color: grey;
-  background: white;
+  color: color(var(--background-color) contrast(0%));
+  background: var(--background-color);
   text-rendering: optimizeLegibilty;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -19,20 +19,29 @@ html {
 }
 
 a {
-  transition: color .25s var(--cubic-in-out);
+  transition: color .15s var(--cubic-in-out);
   text-decoration: none;
   color: var(--theme-color);
+  outline: 0;
 }
 
-a:hover,
-a:active,
+a:visited {
+  color: color(var(--theme-color) hue(+30deg));
+}
+
 a:focus {
   transition: none;
-  color: color(var(--theme-color) blackness(10%));
+  color: color(var(--theme-color) lightness(-30%));
 }
 
-a:focus {
-  outline: 0;
+a:hover {
+  transition: none;
+  color: color(var(--theme-color) lightness(-30%));
+}
+
+a:active {
+  transition: none;
+  color: color(var(--theme-color) hue(+120deg));
 }
 
 h1,
@@ -43,12 +52,12 @@ h5,
 h6 {
   font-size: var(--english);
   font-weight: normal;
-  color: black;
+  color: color(var(--background-color) contrast(100%));
 }
 
 b,
 strong,
 th {
   font-weight: normal;
-  color: black;
+  color: color(var(--background-color) contrast(100%));
 }
