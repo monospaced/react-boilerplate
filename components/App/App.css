@@ -61,3 +61,12 @@ th {
   font-weight: normal;
   color: color(var(--background-color) contrast(100%));
 }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: theme-font, sans-serif;
+  line-height: 1.25;
+}
