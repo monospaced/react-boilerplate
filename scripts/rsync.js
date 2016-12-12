@@ -8,6 +8,7 @@ rsync({
   dest: dest,
   exclude: [
     '.htaccess',
+    '.well-known',
   ],
   host: host,
   recursive: true,
