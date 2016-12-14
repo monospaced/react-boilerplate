@@ -1,9 +1,9 @@
 import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import reactRouterToArray from 'react-router-to-array';
+import ReactRouterToArray from 'react-router-to-array';
 
 require.extensions['.css'] = () => { return; };
-const routes = reactRouterToArray(require('./scripts/routes'));
+const routes = ReactRouterToArray(require('./scripts/routes'));
 
 module.exports = {
   entry: './scripts/entry.js',
