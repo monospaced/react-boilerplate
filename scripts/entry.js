@@ -7,7 +7,6 @@ import Routes from './routes';
 import Root from '../components/Root/Root.js';
 
 if (typeof document !== 'undefined') {
-  console.log('client');
   const app = document.getElementById('app');
   ReactDOM.render(<Router history={browserHistory} routes={Routes}/>, app);
 }
