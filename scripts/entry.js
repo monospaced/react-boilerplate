@@ -13,9 +13,9 @@ if (typeof document !== 'undefined') {
 }
 
 export default (locals, callback) => {
-  const meta = DocumentMeta.renderAsReact();
   const history = createMemoryHistory(locals.path);
   const app = { __html: ReactDOMServer.renderToString(<Router history={history}>{Routes}</Router>), };
+  const meta = DocumentMeta.renderAsReact();
 
   const html = ReactDOMServer.renderToStaticMarkup(<Root meta={meta} app={app} />);
   callback(null, '<!DOCTYPE html>' + html);
