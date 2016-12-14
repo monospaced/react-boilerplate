@@ -8,10 +8,9 @@ class About extends Component {
   }
   render() {
     return (
-      <div>
-        <DocumentMeta title={`About | ${this.props.data.title}`} />
+      <DocumentMeta title={`About | ${this.props.data.title}`}>
         <Main>About</Main>
-      </div>
+      </DocumentMeta>
     );
   }
 }

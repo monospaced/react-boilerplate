@@ -9,10 +9,9 @@ class Index extends Component {
   render() {
 
     return (
-      <div>
-        <DocumentMeta title={this.props.data.title} />
+      <DocumentMeta title={this.props.data.title}>
         <Main>{this.props.data.title}</Main>
-      </div>
+      </DocumentMeta>
     );
   }
 }
