@@ -1,4 +1,4 @@
-import React, { Component, } from 'react';
+import React, {Component} from 'react';
 import '../../assets/favicon.ico';
 
 class Root extends Component {

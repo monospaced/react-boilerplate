@@ -1,4 +1,4 @@
-import React, { Component, } from 'react';
+import React, {Component} from 'react';
 import DocumentMeta from 'react-document-meta';
 import Main from '../Main/Main';
 

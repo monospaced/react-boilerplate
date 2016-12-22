@@ -1,4 +1,4 @@
-import React, { Component, } from 'react';
+import React, {Component} from 'react';
 import DocumentMeta from 'react-document-meta';
 import Main from '../Main/Main';
 
@@ -7,7 +7,6 @@ class Index extends Component {
     super(props);
   }
   render() {
-
     return (
       <DocumentMeta title={this.props.data.title}>
         <Main>{this.props.data.title}</Main>
