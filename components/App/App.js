@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import 'normalize.css';
 import './App.css';
+import '../Main/Main.css';
 import Nav from '../Nav/Nav';
 
 class App extends Component {
@@ -8,12 +9,13 @@ class App extends Component {
     super(props);
   }
   render() {
+    const {data} = this.props.route;
     return (
       <div>
         <Nav
-          data={this.props.route.data}
+          data={data}
         />
-        {React.cloneElement(this.props.children, {data: this.props.route.data})}
+        {React.cloneElement(this.props.children, {data: data})}
       </div>
     );
   }
