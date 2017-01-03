@@ -1,19 +1,20 @@
 import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import ReactRouterToArray from 'react-router-to-array';
+import webpack from 'webpack';
 
 require.extensions['.css'] = () => { return; };
 const routes = ReactRouterToArray(require('./scripts/routes'));
 
-module.exports = {
-  entry: './scripts/entry.js',
+const production = process.env.NODE_ENV === 'production';
 
+const config = {
+  entry: './scripts/entry.js',
   output: {
     filename: 'bundle.js',
     path: __dirname + '/build',
     libraryTarget: 'umd',
   },
-
   module: {
     loaders: [
       {
@@ -46,9 +47,29 @@ module.exports = {
       },
     ],
   },
-
   plugins: [
     new ExtractTextPlugin('styles.css'),
     new StaticSiteGeneratorPlugin('bundle.js', routes),
   ],
 };
+
+if (production) {
+  config.plugins = [
+    ...config.plugins,
+    new webpack.DefinePlugin({
+      'process.env': {
+         NODE_ENV: `'production'`,
+       },
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+      output: {
+        comments: false,
+      },
+    }),
+  ];
+}
+
+module.exports = config;
