@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import 'normalize.css';
 import './App.css';
-import '../Main/Main.css';
+import '../Main/Main.css'; /* <main> style component for Route components */
 import Nav from '../Nav/Nav';
 
 class App extends Component {
@@ -14,7 +14,9 @@ class App extends Component {
       <div>
         <Nav
           data={data}
+          routes={this.props.routes}
         />
+        {/* Route components defined in ./scripts/routes.js */}
         {React.cloneElement(this.props.children, {data: data})}
       </div>
     );
