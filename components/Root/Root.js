@@ -10,6 +10,7 @@ class Root extends Component {
     return (
       <html lang="en-gb">
         <head>
+          <meta charSet="utf-8" />
           {this.props.meta}
           <meta name="viewport" content="width=device-width" />
           <link rel="stylesheet" href={`/styles.css?v=${version}`} />
