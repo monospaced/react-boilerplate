@@ -17,7 +17,7 @@ html {
 }
 
 a {
-  transition: color .15s var(--cubic-in-out);
+  transition: color .15s;
   text-decoration: none;
   color: var(--theme-color);
   outline: 0;

@@ -1,5 +1,5 @@
 :root {
-    /* font-size: 100%; */ /* 16px */
+  /* font-size: 100%; */ /* 16px */
 
   --triple-canon: 7.451rem;
   --double-canon: 4.768rem;
@@ -15,6 +15,4 @@
 
   --background-color: white;
   --theme-color: hotpink;
-
-  --cubic-in-out: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
